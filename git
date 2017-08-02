@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+docker run -it --rm \
+  -v "$(pwd)":/repo \
+  -v /etc/localtime:/etc/localtime \
+  --name git_"$(date +%s)" \
+  gruen/git "${@}"
